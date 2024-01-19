@@ -1,0 +1,14 @@
+/workspaces/calculator_app/src/bin/Debug/net8.0/src
+/workspaces/calculator_app/src/bin/Debug/net8.0/src.deps.json
+/workspaces/calculator_app/src/bin/Debug/net8.0/src.runtimeconfig.json
+/workspaces/calculator_app/src/bin/Debug/net8.0/src.dll
+/workspaces/calculator_app/src/bin/Debug/net8.0/src.pdb
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.AssemblyInfoInputs.cache
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.AssemblyInfo.cs
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.csproj.CoreCompileInputs.cache
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.dll
+/workspaces/calculator_app/src/obj/Debug/net8.0/refint/src.dll
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.pdb
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.genruntimeconfig.cache
+/workspaces/calculator_app/src/obj/Debug/net8.0/ref/src.dll
