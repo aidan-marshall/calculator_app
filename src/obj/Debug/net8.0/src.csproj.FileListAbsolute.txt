@@ -12,3 +12,4 @@
 /workspaces/calculator_app/src/obj/Debug/net8.0/src.pdb
 /workspaces/calculator_app/src/obj/Debug/net8.0/src.genruntimeconfig.cache
 /workspaces/calculator_app/src/obj/Debug/net8.0/ref/src.dll
+/workspaces/calculator_app/src/obj/Debug/net8.0/src.sourcelink.json

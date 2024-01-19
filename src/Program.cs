@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-  class Program
+  public class Program
   {
     static int Add(int x, int y)
     {
@@ -24,6 +24,10 @@ namespace Calculator
         return x / y;
     }
 
+    static void DisplayResult(string userInput, string result) {
+        Console.WriteLine($"{userInput} equals {result}");
+    }
+
     static void Main(string[] args)
     {
         while (true) {
@@ -39,13 +43,27 @@ namespace Calculator
         if (userInput == "q")
         {
             break;
+            Console.ReadKey();
         } 
-        // else-if (function == "+") {
-        //     int result = Add(firstNum, secondNum);
-        //     Console.WriteLine($"{userInput} equals {result}");
-        // } else {
-        //     Console.WriteLine("Don't know buddy");
-        // }
+        else if (function == "+") {
+            int result = Add(firstNum, secondNum);
+            DisplayResult(userInput, result.ToString());
+        }
+        else if (function == "-") {
+            int result = Subtract(firstNum, secondNum);
+            DisplayResult(userInput, result.ToString());
+        }
+        else if (function == "/") {
+            int result = Divide(firstNum, secondNum);
+            DisplayResult(userInput, result.ToString());
+        }
+        else if (function == "x") {
+            int result = Multiply(firstNum, secondNum);
+            DisplayResult(userInput, result.ToString());
+        }
+        else {
+            Console.WriteLine("Don't know buddy");
+        }
         }
 
     }  
