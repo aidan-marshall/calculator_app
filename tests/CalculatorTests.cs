@@ -9,6 +9,18 @@ namespace CalculatorApp.UnitTests.Example
 {
     public class CalculatorTests
     {
-        
+        [Fact]
+        public void AddingOnePlusOneEqualsTwo() 
+        {
+            // ARRANGE
+            var input = "1 + 1";
+            var calculator = new Calculator();
+            
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(2, result);
+        }
     }
 }
