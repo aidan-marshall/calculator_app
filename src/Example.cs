@@ -11,7 +11,21 @@ namespace CalculatorApp.Example
       var @operator = splitInput[1];
       var num2 = int.Parse(splitInput[2]);
 
-      return num1 + num2;
+      switch (@operator) 
+      {
+        case "+":
+        return num1 + num2;
+
+        case "-":
+        return num1 - num2;
+
+        default:
+        return 1;
+      }
+
+
+
+
     }
 
   }

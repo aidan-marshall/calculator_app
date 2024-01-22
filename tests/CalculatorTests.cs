@@ -31,11 +31,56 @@ namespace CalculatorApp.UnitTests.Example
             var input = "10 + 10";
             var calculator = new Calculator();
 
-            //ACT
+            // ACT
             var result = calculator.Solve(input);
 
-            //ASSERT
+            // ASSERT
             Assert.Equal(20, result);
+        }
+
+        [Fact]
+        public void SubtractingOneFromOneEqualsZero()
+        {
+
+            // ARRANGE
+            var input = "1 - 1";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(0, result);
+        }
+
+        [Fact]
+        public void SubtractingNinetySixFromFiftyEightEqualsThirtyEight()
+        {
+
+            // ARRAGE
+            var input = "96 - 58";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(38, result);
+        }
+
+        [Fact]
+        public void OneMultipliedByOneEqualsOne()
+        {
+
+            // ARRANGE
+            var input = "1 * 1";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(1, result);
         }
     }
 }
