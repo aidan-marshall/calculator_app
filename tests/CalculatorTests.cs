@@ -82,5 +82,34 @@ namespace CalculatorApp.UnitTests.Example
             // ASSERT
             Assert.Equal(1, result);
         }
+
+        [Fact]
+        public void FiveMultipliedByTenEqualsFifty()
+        {
+            // ARRANGE
+            var input = "5 * 10";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(50, result);
+        }
+
+        [Fact]
+        public void OneDividedByOneEqualsOne()
+        {
+
+            // ARRANGE
+            var input = "1 / 1";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(1, result);
+        }
     }
 }
