@@ -111,5 +111,20 @@ namespace CalculatorApp.UnitTests.Example
             // ASSERT
             Assert.Equal(1, result);
         }
+
+        [Fact]
+        public void TenDividedByTwoEqualsFive()
+        {
+
+            // ARRANGE
+            var input = "10 / 2";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(5, result);
+        }
     }
 }
