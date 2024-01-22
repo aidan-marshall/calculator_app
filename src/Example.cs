@@ -20,7 +20,7 @@ namespace CalculatorApp.Example
         return num1 - num2;
 
         default:
-        return 1;
+        return 403;
       }
 
 
