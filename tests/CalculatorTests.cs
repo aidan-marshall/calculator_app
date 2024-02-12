@@ -1,8 +1,4 @@
 using System;
-using Xunit;
-using Moq;
-
-// Imports Example File from TestProject
 using CalculatorApp.Example;
 
 namespace CalculatorApp.UnitTests.Example
@@ -125,6 +121,20 @@ namespace CalculatorApp.UnitTests.Example
 
             // ASSERT
             Assert.Equal(5, result);
+        }
+
+        [Fact]
+        public void TenDividedByZeroThrowsDivideByZeroException()
+        {
+            // ARRANGE
+            var input = "10 / 0";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Throws<DivideByZeroException>(() => result);
         }
     }
 }
