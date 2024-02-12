@@ -6,7 +6,7 @@ namespace CalculatorApp.UnitTests.Example
     public class CalculatorTests
     {
         [Fact]
-        public void AddingOnePlusOneEqualsTwo() 
+        public void AddingOnePlusOneEqualsTwo()
         {
             // ARRANGE
             var input = "1 + 1";
@@ -131,10 +131,24 @@ namespace CalculatorApp.UnitTests.Example
             var calculator = new Calculator();
 
             // ACT
+
+            // ASSERT
+            Assert.Throws<DivideByZeroException>(() => calculator.Solve(input));
+        }
+
+        [Fact]
+        public void ZeroDividedByTenShouldEqualZero()
+        {
+            // ARRANGE
+            var input = "0 / 10";
+            var calculator = new Calculator();
+
+            // ACT
             var result = calculator.Solve(input);
 
             // ASSERT
-            Assert.Throws<DivideByZeroException>(() => result);
+            Assert.Equal(0, result);
+
         }
     }
 }
