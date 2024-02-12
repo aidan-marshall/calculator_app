@@ -214,6 +214,49 @@ namespace CalculatorApp.UnitTests.Example
             Assert.Equal(expected, result);
         }
 
+        [Fact]
+        public void InputtingThreeDifferentEquationsShouldReturnTheNumberThree()
+        {
+            // ARRANGE
+            var input = "10 + 5 - 10 + 10";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.OperatorCount(input);
+
+            // ASSERT
+            Assert.Equal(3, result);
+
+        }
+
+        [Fact]
+        public void InputtingFiveDifferentEquationsShouldReturnTheNumberFive()
+        {
+            // ARRANGE
+            var input = "10 + 5 - 10 + 10 + 15 - 13";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.OperatorCount(input);
+
+            // ASSERT
+            Assert.Equal(5, result);
+
+        }
+
+        [Fact]
+        public void AddingFiveToTenMultipliedByTenShouldEqualOneHundredAndFive()
+        {
+            // ARRANGE
+            var input = "5 + 10 * 10";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(150, result);
+        }
 
     }
 }
