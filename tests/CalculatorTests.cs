@@ -148,7 +148,21 @@ namespace CalculatorApp.UnitTests.Example
 
             // ASSERT
             Assert.Equal(0, result);
+        }
 
+        [Fact]
+        public void AddingTenDecimalOneWithFiveShouldEqualFifteenDecimalOne() 
+        {
+
+            // ARRANGE
+            var input = "10.1 + 5";
+            var calculator = new Calculator();
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(15.1, result);
         }
     }
 }
