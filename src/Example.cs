@@ -2,41 +2,43 @@
 
 namespace CalculatorApp.Example
 {
-  public class Calculator 
-  {
-    public int? Solve(string input)
+    public class Calculator
     {
-            int? result = null;
-            var splitInput = input.Split(" ");
-            int num1 = int.Parse(splitInput[0]);
-            var @operator = splitInput[1];
-            int num2 = int.Parse(splitInput[2]);
+        public decimal? Solve(string input)
+        {
+            decimal? result = null;
 
-            if (num2 == 0) 
+            var splitInput = input.Split(" ");
+            decimal? num1 = decimal.Parse(splitInput[0]);
+            var @operator = splitInput[1];
+            decimal? num2 = decimal.Parse(splitInput[2]);
+
+
+            if (num2 == 0)
             {
                 throw new DivideByZeroException("Attempted to divide by zero.");
             }
 
-                switch (@operator)
-                {
-                    case "+":
-                        result = num1 + num2;
-                        break;
+            switch (@operator)
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
 
-                    case "-":
-                        result = num1 - num2;
-                        break;
+                case "-":
+                    result = num1 - num2;
+                    break;
 
-                    case "*":
-                        result = num1 * num2;
-                        break;
+                case "*":
+                    result = num1 * num2;
+                    break;
 
-                    case "/":
-                        result = num1 / num2;
-                        break;
-                }
-        
+                case "/":
+                    result = num1 / num2;
+                    break;
+            }
+
             return result;
+        }
     }
-  }
 }

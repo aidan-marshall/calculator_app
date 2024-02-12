@@ -151,18 +151,69 @@ namespace CalculatorApp.UnitTests.Example
         }
 
         [Fact]
-        public void AddingTenDecimalOneWithFiveShouldEqualFifteenDecimalOne() 
+        public void AddingTenDecimalOneWithFiveShouldEqualFifteenDecimalOne()
         {
 
             // ARRANGE
-            var input = "10.1 + 5";
+            var input = "10,1 + 5";
             var calculator = new Calculator();
+            decimal expected = 15.1M; 
 
             // ACT
             var result = calculator.Solve(input);
 
             // ASSERT
-            Assert.Equal(15.1, result);
+            Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void MultiplyingTenDecimalOnebyFiveShouldEqualFiftyDecimalFive()
+        {
+
+            // ARRANGE
+            var input = "10,1 * 5";
+            var calculator = new Calculator();
+            decimal expected = 50.5M;
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void SubtractingTenDecimalOnebyFiveShouldEqualFiveDecimalOne()
+        {
+
+            // ARRANGE
+            var input = "10,1 - 5";
+            var calculator = new Calculator();
+            decimal expected = 5.1M;
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void DividingTenDecimalOnebyFiveShouldEqualTwoDecimalZeroTwo()
+        {
+
+            // ARRANGE
+            var input = "10,1 / 5";
+            var calculator = new Calculator();
+            decimal expected = 2.02M;
+
+            // ACT
+            var result = calculator.Solve(input);
+
+            // ASSERT
+            Assert.Equal(expected, result);
+        }
+
+
     }
 }
